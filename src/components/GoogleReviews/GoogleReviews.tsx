@@ -6,7 +6,7 @@ import {
 } from "@chakra-ui/core";
 import React, { useEffect } from "react";
 import { connect, useConnect } from "frontity";
-import { Packages } from "../../../types";
+import { Packages, GoogleReviewsData } from "../../../types";
 
 /**
  * Google Reviews
@@ -19,7 +19,7 @@ const GoogleReviews = () => {
   }, []);
 
 
-  const data = state.source.get(`/googleReviews`);
+  const data = state.source.get(`/googleReviews`) as GoogleReviewsData;
 
   console.log(data)
   console.log("Hello")
