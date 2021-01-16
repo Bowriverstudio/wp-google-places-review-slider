@@ -1,0 +1,12 @@
+{
+  "name": "wp-google-places-review-slider",
+  "version": "1.0.0",
+  "description": "A package the connects wp-google-places-review-slider with Frontity",
+  "keywords": [
+    "frontity",
+    "wp-google-places-review-slider",
+    "chakra ui"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {}
+}
