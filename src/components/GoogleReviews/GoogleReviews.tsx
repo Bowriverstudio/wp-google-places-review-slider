@@ -4,7 +4,7 @@
 import {
   Box, HStack, Image, SimpleGrid, Text
 } from "@chakra-ui/core";
-import React from "react";
+import React, { useEffect } from "react";
 import { connect, useConnect } from "frontity";
 import { Packages } from "../../../types";
 
@@ -14,7 +14,19 @@ import { Packages } from "../../../types";
 const GoogleReviews = () => {
   const { state, actions } = useConnect<Packages>();
 
-  actions.source.fetch(`/googleReviews`);
+  useEffect(() => {
+    actions.source.fetch(`/googleReviews`);
+  }, []);
+
+
+  const data = state.source.get(`/googleReviews`);
+
+  console.log(data)
+  console.log("Hello")
+
+  // Load the reviews, but only if the data is ready.
+  if (!data.isReady) return null;
+
 
   return (
     <Box >
