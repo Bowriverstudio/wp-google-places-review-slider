@@ -5,11 +5,16 @@ import {
   Box, HStack, Image, SimpleGrid, Text
 } from "@chakra-ui/core";
 import React from "react";
+import { connect, useConnect } from "frontity";
+import { Packages } from "../../../types";
 
 /**
  * Google Reviews
  */
-const GoogleReviews: React.FC = () => {
+const GoogleReviews = () => {
+  const { state, actions } = useConnect<Packages>();
+
+  actions.source.fetch(`/googleReviews`);
 
   return (
     <Box >
@@ -18,5 +23,5 @@ const GoogleReviews: React.FC = () => {
   );
 };
 
-export default (GoogleReviews);
+export default connect(GoogleReviews);
 
