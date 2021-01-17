@@ -37,7 +37,7 @@ export interface GoogleReviewsData extends Data {
  * @link https://developers.google.com/my-business/reference/rest/v4/accounts.locations.reviews#Review
  * 
  */
-type GoogleReviewData = {
+export type GoogleReviewData = {
   /**
    * Created time of the review
    */
